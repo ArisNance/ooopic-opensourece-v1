@@ -1,0 +1,9 @@
+default: &default
+  project_id: lavail-203802
+  gcs_bucket: 714241589210
+
+development:
+  <<: *default
+
+production:
+  <<: *default

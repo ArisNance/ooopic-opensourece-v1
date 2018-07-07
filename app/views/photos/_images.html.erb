@@ -1,0 +1,39 @@
+<style>
+
+#image_gallery {
+    margin-top: -10%;
+}
+</style>
+<section id="image_gallery">
+  <div class="container gal-container">
+  <% @photos.each_with_index do |photo, index| %>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#photo<%= index + 1 %>">
+          <%= image_tag photo.image.url %>
+        </a>
+        <div class="modal fade" id="photo<%= index + 1 %>" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <!--%= link_to 'Download', download_path(:id => photo.id, :image => photo.image) %>-->
+                <%= link_to download_url(photo), class: "download_link" do %>
+                <i class="fas fa-cloud-download-alt"></i>
+                <% end %>
+
+                
+                <%= image_tag photo.image.url, class: "no_overlay" %>
+              </div>
+                <div class="col-md-12 description">
+                  <h4><%= photo.title %></h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+   
+    </div>
+</section>

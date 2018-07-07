@@ -1,0 +1,80 @@
+<header>
+
+	<div class="container profile-container">
+
+		<div class="profile">
+
+			<div class="profile-image">
+
+				<%= image_tag(@user.image, style: "width:130px", class: "img-circle") %>
+
+			</div>
+
+			<div class="profile-user-settings">
+
+				<h1 class="profile-user-name"><%= @user.name %></h1>
+				<% if current_user == @user %>
+				<div class="profile-edit-btn">Edit Profile</div>
+				<% else %>
+				<div class="profile-edit-btn">Join Free</div>
+				<% end %>
+
+				<div class="profile-settings-btn"><i class="fas fa-cog"></i></div>
+
+			</div>
+
+			<div class="profile-stats">
+
+				<ul>
+					<li><span class="profile-stat-count"><%= @user.photos.count %></span> Photos</li>
+					<!--<li><span class="profile-stat-count">188</span> followers</li>-->
+					<!--<li><span class="profile-stat-count">206</span> following</li>-->
+				</ul>
+
+			</div>
+
+			<div class="profile-bio">
+
+				<!--<p><span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>-->
+
+			</div>
+
+		</div>
+		<!-- End of profile section -->
+
+	</div>
+	<!-- End of container -->
+
+</header>
+
+<main>
+
+	<div class="container">
+
+		<div class="gallery">
+		<% @user.photos.each do |photo| %>
+			<div class="gallery-item">
+
+				<%= image_tag(photo.image.url, class: "gallery-image")%>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<!--<li class="gallery-item-likes"><i class="fas fa-heart"></i> 56</li>-->
+						<!--<li class="gallery-item-comments"><i class="fas fa-comment"></i> 2</li>-->
+					</ul>
+
+				</div>
+
+			</div>
+		<% end %>
+
+		</div>
+		<!-- End of gallery -->
+
+		<!--<div class="spinner"></div>-->
+
+	</div>
+	<!-- End of container -->
+
+</main>

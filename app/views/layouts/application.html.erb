@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ooopic - Join us in Beta</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'jquery.easy_autocomplete.js', 'data-turbolinks-track' => true %>
+    <%= favicon_link_tag 'favicon.ico' %>
+  
+    <!-- Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--autocomplete-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css" />
+    <!--<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>-->
+
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,400italic">
+    <!-- Stroke 7 font by Pixeden (http://www.pixeden.com/icon-fonts/stroke-7-icon-font-set)-->
+    <%= stylesheet_link_tag 'helper.css', media: 'all', 'data-turbolinks-track' => true %>
+        <!-- theme stylesheet-->
+    <%= stylesheet_link_tag 'style_default.css', media: 'all', 'data-turbolinks-track' => true %>
+    <!-- owl carousel-->
+    <%= stylesheet_link_tag 'owl_carousel.css', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'owl_theme.css', media: 'all', 'data-turbolinks-track' => true %>
+ 
+    <!-- plugins-->
+    <%= stylesheet_link_tag 'simpletextrotator.css', media: 'all', 'data-turbolinks-track' => true %>
+    <!-- Custom stylesheet - for your changes-->
+    <%= stylesheet_link_tag 'custom.css', media: 'all', 'data-turbolinks-track' => true %>
+    
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+    
+    
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'layouts/header_navbar' %>
+<%= yield %>
+<script>
+// $(document).ready(function() {
+//   $("#get-started").DataTable();
+//   $('[data-toggle="tooltip"]').tooltip();
+// });
+
+$(document).ready(function(){
+    $(".toggle-modal").click(function(){
+        $("#get-started").modal('toggle');
+    });
+});
+</script>
+<script>
+window.addEventListener("load", function() {
+$input = $("[data-behavior='autocomplete']")
+
+var options = {
+getValue: "title",
+url: function(phrase) {
+return "/search.json?q=" + phrase;
+},
+categories: [
+{
+listLocation: "photos",
+header: "Photo",
+},
+{
+listLocation: "podcasts",
+header: "Podcasts",
+}
+],
+template: {
+type: "iconLeft",
+fields: {
+iconSrc: "icon"
+}
+},
+theme: "blue-light",
+list: {
+onChooseEvent: function() {
+var url = $input.getSelectedItemData().url
+$input.val("")
+window.location = (url)
+},
+showAnimation: {
+type: "fade",
+time: 300,
+callback: function() {}
+},
+hideAnimation: {
+type: "fade",
+time: 300,
+callback: function() {}
+},
+}
+}
+
+$input.easyAutocomplete(options)
+});
+</script>
+</body>
+</html>

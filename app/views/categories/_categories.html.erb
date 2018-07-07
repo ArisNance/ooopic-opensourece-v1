@@ -1,0 +1,7 @@
+
+<div class="container explore_tags">
+  <h2>Explore</h2>
+  <% @categories.each do |category| %>
+  <button type="button" class="btn btn-primary explore_btn"><%= link_to category.name, category, id: "tag_links" %> </button>
+  <% end %>
+</div>

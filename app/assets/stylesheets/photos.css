@@ -1,0 +1,53 @@
+/*# sourceMappingURL=photos.css.map */
+#title {
+    width: 40%;
+    border-radius: 4px;
+}
+
+#photo_image {
+    border: none;
+}
+
+.actions {
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 65px;
+}
+
+#new_photo {
+    margin-left: 43%;
+    margin-top: 5%;
+}
+
+.edit_photo {
+    margin-left: 43%;
+    margin-top: 5%;
+}
+
+#terms {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 16px 0;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+}
+
+#imgprvw {
+    width: 150%;
+    margin-left: -55%;
+}
+
+#img-preview {
+    width: 150%;
+    margin-left: -55%;
+}
+
+#tag_cloud {
+  width: 400px;
+  line-height: 1.6em;
+}
+.s { font-size: 0.8em; }
+.m { font-size: 1.2em; }
+.l { font-size: 1.8em; }
