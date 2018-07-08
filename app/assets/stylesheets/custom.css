@@ -54,10 +54,20 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: url('https://images.unsplash.com/photo-1530755346628-3357ce4f17bc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8d2329d0baca9de9ebb0fdc5f6bf8efd&auto=format&fit=crop&w=1350&q=80') center center no-repeat;
+}
+.category-image {
   background-size: cover;
   opacity: 0.6;
+  height: auto;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width:100%;
 }
+
 
 .inset {
   width: 48px;
@@ -253,4 +263,26 @@ i.red{
 .l {
     text-decoration: underline;
     color:black;
+}
+
+
+ /* Mac laptop */
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) { 
+.dropdown {
+    margin-top: -65px;
+    margin-left: -6%;
+    } 
+}
+
+/*iphone/cells*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+.fa-ellipsis-h {
+    display:none !important;
+    } 
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+#tag_cloud {
+    width: 375px;
+    } 
 }

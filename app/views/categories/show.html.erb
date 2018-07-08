@@ -4,14 +4,23 @@
 #image_gallery {
     margin-top: 0%;
 }
+
+/*laptop*/
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) { 
+#image_gallery {
+    margin-top: 10% !important;
+    }
+}
+
 </style>
     <!--   *** TEXT ***-->
-      <section id="text" class="text-page section-inverse background-secondary bg-img">
+      <section id="text" class="text-page section-inverse background-secondary">
+        <%= image_tag(@category.image, class: "category-image") %>
         <div class="container">
           <div class="row">
             <div class="col-md-12" style="width: 75%;">
-              <h2 class="text-center" style="color:black;text-align: left;"><%= @category.name %></h2>
-              <p class="lead text-center" style="color:black;text-align: left;font-weight:500;"><%= @category.desc %></p>
+              <h2 class="text-center" style="color:white;text-align: left;"><%= @category.name %></h2>
+              <p class="lead text-center" style="color:white;text-align: left;font-weight:500;"><%= @category.desc %></p>
 
             </div>
           </div>
