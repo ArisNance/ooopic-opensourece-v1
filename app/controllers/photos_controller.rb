@@ -25,9 +25,22 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
+    @tags = Tag.all
+    #@photos = Photo.all
     @categories = Category.all
-    @photos = Photo.all
-    @photos = Photo.tagged_with(params[:tag])
+  if params[:search]
+    @photos = Photo.search(params[:search]).order("created_at DESC")
+  else
+    @photos = Photo.all.order("created_at DESC")
+  end
+  end
+  
+  def search
+    if params[:search].nil?
+      @photos = []
+    else
+      @photos = Photo.search params[:title]
+    end
   end
 
   # GET /photos/1

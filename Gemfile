@@ -26,9 +26,10 @@ gem 'carrierwave', '~> 1.0'
 gem 'carrierwave-google-storage'
 gem 'google-api-client', '~> 0.9'
 #search
-gem 'ransack'
+#gem 'ransack'
 gem 'acts-as-taggable-on'
 gem 'rails_admin', '~> 1.3'
+gem 'chosen-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'

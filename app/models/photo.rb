@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
     attr_accessor :content, :name, :tag_list
     has_many :taggings
     has_many :tags, through: :taggings
-     belongs_to :user
+    belongs_to :user
     
     # Tagging system
     def self.tagged_with(name)
@@ -29,7 +29,7 @@ class Photo < ActiveRecord::Base
       
     belongs_to :category
        
-      
+    # Storage upload for Google.. DON'T TOUCH!  
     def self.storage_bucket
         @storage_bucket ||= begin
          config = Rails.application.config.x.settings
@@ -37,9 +37,13 @@ class Photo < ActiveRecord::Base
                                   credentials: config["lavail-53f1310346ba.json"]
          storage.bucket config["ooopic"]
     end
-     
-     
-  
+    ######## 
+    
+    # Implementing a simple search function
+    def self.search(search)
+      where("title ILIKE ?", "%#{search}%")
+    end
+    ####
     
     end
 end

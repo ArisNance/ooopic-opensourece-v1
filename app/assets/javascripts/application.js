@@ -14,4 +14,5 @@
 //= require jquery_ujs
 // require turbolinks
 //= require jquery.easy_autocomplete
+//= require chosen-jquery
 //= require_tree .

@@ -3,5 +3,5 @@
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
   <% end %>
 </div>
-...
-Tags: <%= raw photo.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+
+<!--Tags: %= raw Photo.tag.map { |t| link_to t, tag_path(t) }.join(', ') %>-->

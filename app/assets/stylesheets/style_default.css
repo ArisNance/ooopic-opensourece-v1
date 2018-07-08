@@ -899,9 +899,15 @@ ul.dropdown-menu li a:hover {
 .modal-backdrop {
   z-index: 1035;
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 .footer__copyright {
-  background: #34314c;
-  color: #ccc;
+  background: #fff;
+  color: black;
   padding: 20px 0;
   font-size: 14px;
   line-height: 28px;

@@ -89,11 +89,10 @@
               <!--  <input id="submit" type="submit" value="Search" class="btn btn-primary">-->
               <!--</form>-->
               
-            <%= form_tag('/search', local: true, method: :get, class: 'form-inline' ) do %>
-              <%= text_field_tag(:q, nil, data: { behavior: 'autocomplete' }, placeholder: 'Search', class: 'form-control mr-sm-2') %>
-              <%= button_tag('Search', class: 'btn btn-outline-success my-2 my-sm-0', type: 'submit') %>
-            <% end %>
+            <%= render 'layouts/search_form' %>
+           
             <%= render 'categories/categories' %>
+            <%= render 'photos/tags' %>
             </div>
             <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
               <p class="margin-bottom--zero"><img alt="" src="img/signup.png" class="img-responsive"></p>
@@ -110,7 +109,7 @@
         </div>
       </section>
       <!--   *** TEXT END ***-->
-
+    <%= render 'layouts/footer' %>
     </div>
    
    

@@ -1,4 +1,9 @@
-<%= form_tag('/search', local: true, method: :get, class: 'form-inline margin-top sign-up-form' ) do %>
-  <%= text_field :q, placeholder: "Search 1000s of images", data: { behavior: "autocomplete" }, class: "form-control", id: "email" %>
-  <%= button_tag "Search", class: "btn btn-primary", id: "submit", type: 'submit' %>
+<style>
+#search:disabled {
+    background: #dddddd;
+}
+</style>
+<%= form_tag(photos_path, :method => "get", id: "search-form", class: "form-inline margin-top sign-up-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search 1000s of images", class: "form-control", disabled: "disabled" %>
+    <%= submit_tag "Search", class: "btn btn-primary", :name => nil %>
 <% end %>

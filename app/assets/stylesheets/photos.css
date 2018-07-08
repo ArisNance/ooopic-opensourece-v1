@@ -51,3 +51,39 @@
 .s { font-size: 0.8em; }
 .m { font-size: 1.2em; }
 .l { font-size: 1.8em; }
+
+/*Chosen*/
+.chosen-container-multi .chosen-choices li.search-choice {
+    position: relative;
+    margin: 3px 5px 3px 0;
+    padding: 13px;
+    border: 1px solid #f77373;
+    max-width: 100%;
+    border-radius: 3px;
+    background-color: #eeeeee;
+    background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+    background-size: 100% 19px;
+    background-repeat: repeat-x;
+    background-clip: padding-box;
+    box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+    color: #333;
+    line-height: 13px;
+    cursor: default;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.chosen-container-multi .chosen-choices {
+    border:none;
+}
+
+.chosen-container .chosen-results li.active-result {
+    display: -webkit-inline-box;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.chosen-container .chosen-results li.highlighted {
+    background-image: linear-gradient(#f78072 20%, #f77373 90%);
+}

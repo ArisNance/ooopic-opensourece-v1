@@ -85,7 +85,7 @@
     font-size: 50px;
     position: absolute;
     margin-left: 5%;
-    color: #ffffff82;
+    color: #84848482;
 }
 
 .gal-container{
@@ -236,4 +236,21 @@ i.red{
 .gal-container{
     padding-top :75px;
     padding-bottom:75px;
+}
+/*tag cloud*/
+#tag_cloud {
+    width: 400px;
+    line-height: 2.5em;
+    margin-top: 2%;
+    position: static;
+}
+.m {
+    font-size:1.2em;
+    font-weight:600;
+    text-decoration: underline;
+    color:black;
+}
+.l {
+    text-decoration: underline;
+    color:black;
 }
