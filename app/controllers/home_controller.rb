@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+   @user = User.all
    @photos = Photo.all
    @categories = Category.all
   end

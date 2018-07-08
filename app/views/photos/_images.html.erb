@@ -27,6 +27,8 @@
               </div>
                 <div class="col-md-12 description">
                   <h4><%= photo.title %></h4>
+                  <br>
+                  <h4 id="user_name"><span style="font-size:12px;">Uploaded by</span>&nbsp<%= link_to photo.user.name, profile_path(photo.user.id) %></h4>
                 </div>
             </div>
           </div>

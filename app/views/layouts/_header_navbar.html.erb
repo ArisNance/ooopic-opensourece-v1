@@ -1,3 +1,17 @@
+<style>
+/*laptop*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+#login-btn {
+    margin-left: 40%;
+    }
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+#sign_out {
+    margin-left: 40%;
+    }
+}
+</style>
 <header class="header">
     <div role="navigation" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -19,7 +33,7 @@
             <% if current_user %>
             <a href="#"><%= link_to "Sign out", signout_path, id: "sign_out", class: "btn navbar-btn btn-ghost" %></a>
             <% else %>
-            <a href="#" data-toggle="modal" data-target="#get-started" class="btn navbar-btn btn-ghost">Login</a>
+            <a href="#" data-toggle="modal" data-target="#get-started" class="btn navbar-btn btn-ghost" id="login-btn">Login</a>
             <% end %>
             <% if current_user %>
             <ul class="nav navbar-nav navbar-right">
@@ -44,4 +58,21 @@
       </div>
     </div>
   </header>
-  
+        <!-- *** SIGNUP MODAL ***_________________________________________________________
+      -->
+      <div id="get-started" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+              <h4 class="modal-title text-center">Get started</h4>
+            </div>
+            <div class="modal-body">
+               <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "btn btn-primary" %>
+               <br>
+              <p class="text-center text-muted">Join other photographers using Ooopic for free. Join us in Alpha! <br><br><a href="https://twitter.com/ooopic_me?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @Ooopic</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- *** SIGNUP MODAL END ***-->

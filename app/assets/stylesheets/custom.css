@@ -274,6 +274,14 @@ i.red{
     } 
 }
 
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) { 
+.actions {
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 30px;
+    }
+}
+
 /*iphone/cells*/
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
 .fa-ellipsis-h {
@@ -282,7 +290,29 @@ i.red{
 }
 
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+#title {
+    width: auto;
+    border-radius: 4px;
+    margin-left: -80px;
+    } 
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+.actions {
+    position: absolute;
+    margin-top: 100%;
+    margin-left: -5%;
+    } 
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
 #tag_cloud {
     width: 375px;
+    } 
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+.navbar-default .navbar-toggle {
+    margin-top: -18%;
     } 
 }
