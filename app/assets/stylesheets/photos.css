@@ -97,6 +97,14 @@
     margin-top: -45px;
 }
 
+.fa-twitter {
+    font-size: 27px;
+    color: #03a9f4;
+    margin-top: -95px;
+    position: absolute;
+    margin-left: 20%;
+}
+
 /*Mobile*/
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
 #terms {
