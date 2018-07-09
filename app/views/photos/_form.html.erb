@@ -12,8 +12,9 @@
   <% end %>
   <div class="col-xs-6 col-sm-6 col-md-6">
 			<div class="form-group">
-			  <%= f.text_field  :title, class: "form-control text_field-lg", id: "title", placeholder: "Add a title" %>
+			  <%= f.text_field  :title, class: "form-control text_field-lg", id: "title", placeholder: "Add a title", required: true %>
 			</div>
+			
 			<div class="form-group">
 			  <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: false %>
 			</div>
