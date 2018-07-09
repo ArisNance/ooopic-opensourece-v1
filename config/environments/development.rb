@@ -6,10 +6,6 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
   
-  config.assets.configure do |env|
-    env.cache = ActiveSupport::Cache.lookup_store(:null_store)
-  end
-  config.assets.compile = false
 
   # Do not eager load code on boot.
   config.eager_load = false
