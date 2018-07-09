@@ -21,6 +21,11 @@ class Photo < ActiveRecord::Base
     end
     end
     
+    def self.tagged_with(name)
+      Tag.find_by_name!(name).photos
+    end
+
+    
     def tag_list
       tags.map(&:name).join(", ")
     end
