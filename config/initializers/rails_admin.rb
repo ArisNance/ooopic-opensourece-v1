@@ -1,4 +1,10 @@
 RailsAdmin.config do |config|
+  config.parent_controller = "::ApplicationController"
+  
+  config.authorize_with do
+    redirect_to main_app.root_path unless current_user.try(:admin?)
+  end
+  
 
   ### Popular gems integration
 
