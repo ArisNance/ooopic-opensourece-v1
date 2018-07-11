@@ -35,8 +35,9 @@
                   <br>
                   <br>
                   <span id="share">
+                    <!--from #{photo.user.name}-->
                     <!--share on twitter-->
-                    <%= link_to "http://twitter.com/home?status=Here's a new photo from #{photo.user.name} titled #{photo.title} #{photo_url(photo)}. Post free on Ooopic.me. %23Photography %23Ooopic %23Photos %23FreeImages %23FreePhotos" , target: "_blank" do %><i style="margin-left: 25%; font-size: 27px; color: #03a9f4;" class="fab fa-twitter"></i><% end %></b>
+                    <%= link_to "http://twitter.com/home?status=Here's a new photo titled #{photo.title} #{photo_url(photo)}. Post free on Ooopic.me. %23Photography %23Ooopic %23Photos %23FreeImages %23FreePhotos" , target: "_blank" do %><i style="margin-left: 25%; font-size: 27px; color: #03a9f4;" class="fab fa-twitter"></i><% end %></b>
                   </span>
                 </div>
             </div>
