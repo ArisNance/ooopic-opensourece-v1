@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'photos#index', as: :tag
   
   # User profile
-  get 'user/:id' => 'users#show', as: :profile
+  get 'profile/user_:id' => 'users#show', as: :profile
   
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
