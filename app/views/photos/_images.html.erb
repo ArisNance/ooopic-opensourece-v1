@@ -3,6 +3,10 @@
 #image_gallery {
     margin-top: -10%;
 }
+
+.gal-item a:after{
+  display:none;
+}
 </style>
 <section id="image_gallery">
   <div class="container gal-container">
@@ -31,7 +35,7 @@
                   <!--## Photo.user.name is giving errors on heroku but works locally
                   ######
                   -->
-                  <!--<h4 id="user_name"><span style="font-size:12px;">Uploaded by</span>&nbsp%= link_to photo.user.name, profile_path(photo.user.id) %></h4>-->
+                  <h4 id="user_name"><span style="font-size:12px;">Uploaded by</span>&nbsp<%= link_to photo.user.try(:name).blank? ? 'N/A' : photo.user.name, profile_path(photo.user.id) %></h4>
                   <br>
                   <br>
                   <span id="share">
