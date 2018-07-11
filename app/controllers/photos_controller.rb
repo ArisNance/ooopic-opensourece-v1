@@ -67,6 +67,7 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
     @photo = current_user.photos.build(photo_params)
     @photo.category_id = params[:category_id]
 
@@ -114,6 +115,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:title, :image, :admin, :category_id, :tag_list)
+      params.require(:photo).permit(:title, :image, :admin, :category_id, :tag_list, :tag_ids)
     end
 end
