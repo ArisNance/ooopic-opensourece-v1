@@ -51,8 +51,8 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new ## categories are not working on new method. Only works with Update.
   if current_user
+    @photo = current_user.photos.build
     @categories = Category.all.map{|c| [ c.name, c.id ] }
-    @photo = current_user.photos.build 
   else
     redirect_to root_url notice: 'You must sign in or sign up first.'
   end
@@ -67,7 +67,6 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
     @photo = current_user.photos.build(photo_params)
     @photo.category_id = params[:category_id]
 
@@ -115,6 +114,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:title, :image, :admin, :category_id, :tag_list, :tag_ids)
+      params.require(:photo).permit(:title, :image, :admin, :category_id, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
     end
 end
