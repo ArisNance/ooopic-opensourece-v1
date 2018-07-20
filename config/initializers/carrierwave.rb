@@ -9,7 +9,7 @@ CarrierWave.configure do |config|
   }
   
   config.gcloud_credentials = {
-    gcloud_project: 'lavail',
-    gcloud_keyfile: 'lavail-53f1310346ba.json'
+    gcloud_project: '',
+    gcloud_keyfile: ''
   }
 end
