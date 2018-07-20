@@ -7,18 +7,32 @@
     ----------------------------------------------------------------- 
 
 
-Welcome to your Rails project on Cloud9 IDE!
+Welcome to Ooopic V1
 
 To get started, just do the following:
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://HOSTNAME/).
+1. Clone and bundle install all gems.
+2.Run Rake db:create db:migrate.
+3. Checkout the settings.yml - Omniauth inside of the config - and Carrierwave.rb inside on config. Your creds will go here.
 
 Happy coding!
-The Cloud9 IDE team
+The Ooopic team
 
 
-## Support & Documentation
+## About Ooopic
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+Visit http://docs.c9.io for support, 
+
+Ooopic was build out of frustration. The goal was to provide updated code for today's Hackers and Makers. This is very much for learning and for building your own Ooopic or Unsplash; or whatever youw want!
+
+** Help build Ooopic. We maintain another private repo for obvious reason, but we can maintain the opensource as well. 
+
+## Features
+
+Facebook login
+User profiles
+Download Links for photos
+Google Cloud Storage Config -- NO AWS!!!!
+Grid display
+Photo tagging system
+

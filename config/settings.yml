@@ -1,6 +1,6 @@
 default: &default
-  project_id: lavail-203802
-  gcs_bucket: 714241589210
+  project_id: 
+  gcs_bucket: 
 
 development:
   <<: *default
